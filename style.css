@@ -27,7 +27,7 @@ body {
   background-image: url('assets/img/Halftone-Texture.png');
   background-size: cover;
   opacity: 0.3;
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
 }
 
