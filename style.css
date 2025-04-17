@@ -1,0 +1,310 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  background: #000;
+}
+
+/* Shared Background Wrapper */
+.hero-wrapper {
+  position: relative;
+  background-image: url('assets/img/Green-BG.png');
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: top center;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/img/Halftone-Texture.png');
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+.randy-head {
+  position: absolute;
+  top: 1.5%;
+  left: 43%;
+  width: 660px;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.hero-title {
+  position: absolute;
+  bottom: 40px;
+  left: 48%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 920px;
+  z-index: 1;
+}
+.nav-buttons {
+  position: absolute;
+  right: 40px;
+  top: 44%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+.nav-buttons img {
+  width: 324px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.nav-buttons img:hover {
+  transform: scale(1.05);
+}
+
+/* Hero Slogan Section */
+.hero-slogan {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 4;
+}
+.slogan-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+.slogan-top {
+  width: 132%;
+  height: auto;
+  display: block;
+  z-index: 1;
+  transform: translateX(-16%);
+}
+.slogan-strike {
+  position: absolute;
+  top: 32%;
+  left: 60%;
+  width: 50%;
+  height: auto;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+.slogan-graffiti {
+  z-index: 3;
+  width: 44%;
+  max-width: 320px;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  margin-top: -10px;
+  transform: translateX(20%);
+}
+
+/* Randy Pizza Section */
+.randy-pizza {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.pizza-scene-img {
+  width: 100%;
+  display: block;
+}
+.line {
+  height: 14px;
+  background: #5c9730;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+.top-line {
+  margin-bottom: -3px;
+}
+.bottom-line {
+  margin-top: -3px;
+}
+
+/* Tokenomics Section */
+.tokenomics-section {
+  position: relative;
+  background-image: url('assets/img/Green-BG.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  overflow: hidden;
+}
+.tokenomics-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/img/Halftone-Texture.png');
+  background-size: cover;
+  background-position: top;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+}
+.tokenomics-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+.tokenomics-title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px #000;
+  letter-spacing: 2px;
+}
+.tokenomics-hexes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  padding: 0;
+  border: 0;
+}
+.tokenomics-hexes img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  gap: 0;
+  display: block;
+}
+.contract-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  transform: translateY(-70%);
+}
+.contract-img {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+}
+.copy-icon {
+  width: 240px;
+  height: auto;
+  margin-left: 80px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  .randy-head {
+    width: 80%;
+    max-width: 260px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
+  .hero-title {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav-buttons {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+  }
+  .nav-buttons img {
+    width: 180px;
+  }
+  .hero-slogan {
+    width: 90%;
+    gap: 6px;
+    margin-top: 20px;
+  }
+  .slogan-container {
+    max-width: 100%;
+  }
+  .slogan-top {
+    width: 105%;
+    transform: translateX(-2%);
+  }
+  .slogan-strike {
+    top: 30%;
+    width: 60%;
+    left: 60%;
+  }
+  .slogan-graffiti {
+    width: 60%;
+    margin-top: -6px;
+    transform: translateX(12%);
+  }
+  .tokenomics-title {
+    font-size: 2rem;
+  }
+  .tokenomics-hexes img {
+    width: 100%;
+    max-width: 200px;
+  }
+  .contract-img {
+    max-width: 480px;
+  }
+  .copy-icon {
+    width: 100px;
+    margin-left: -20px;
+  }
+}
